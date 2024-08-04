@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Nav() {
   return (
     <header className="fixed top-0 left-0 w-full z-10 h-[10%]">
-      <nav className="flex bg-slate-800 text-white w-full h-full">
+      <nav className="flex bg-blue-gray-800 text-white w-full h-full">
         <ul className="flex list-none p-0 m-0 justify-around align-middle w-full h-full">
           <li className="flex">
             <Link

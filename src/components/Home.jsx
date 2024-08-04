@@ -15,7 +15,7 @@ function Home() {
 
   return (
     <div className="flex">
-      <section className="h-[100vh] flex flex-col justify-center items-center bg-gray-100 font-custom relative w-1/2">
+      <section className="h-100vh flex flex-col justify-center items-center bg-gray-100 font-custom relative w-1/2">
         <h1 className="inline-block w-full text-7xl leading-normal pl-24">
           Hello, I'm Daniel
         </h1>
@@ -34,7 +34,9 @@ function Home() {
           the tech field.
         </p>
       </section>
-      <aside className="h-[100vh] flex flex-col justify-center items-center bg-gray-100 font-custom relative w-1/2"></aside>
+      <aside className="h-[100vh] flex flex-col justify-center items-center bg-gray-100 font-custom relative w-1/2">
+        <img src="/coding-image.jpg" className="w-[90%] rounded-2xl"/>
+      </aside>
     </div>
   );
 }
