@@ -2,10 +2,10 @@
 A sleek and modern portfolio website designed to showcase my projects and skills. Built with cutting-edge web technologies, this app highlights my expertise in web development and provides an engaging user experience.
 
 ## Table of Contents
-* (Features)[https://github.com/danvluewubley/portfolio-react/blob/main/README.md#features]
-* (Technologies Used)[https://github.com/danvluewubley/portfolio-react/blob/main/README.md#technologies-used]
-* (License)[https://github.com/danvluewubley/portfolio-react/blob/main/README.md#license]
-* (Contact)[https://github.com/danvluewubley/portfolio-react/blob/main/README.md#contact]
+* [Features](https://github.com/danvluewubley/portfolio-react/blob/main/README.md#features)
+* [Technologies Used](https://github.com/danvluewubley/portfolio-react/blob/main/README.md#technologies-used)
+* [License](https://github.com/danvluewubley/portfolio-react/blob/main/README.md#license)
+* [Contact](https://github.com/danvluewubley/portfolio-react/blob/main/README.md#contact)
   
 ## Features
 * Interactive project gallery with detailed descriptions
