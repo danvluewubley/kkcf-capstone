@@ -1,5 +1,11 @@
+import { DefaultAccordion } from "./DefaultAccordion";
+
 function Skills() {
-  return <>Skills</>;
+  return (
+    <>
+      <DefaultAccordion />
+    </>
+  );
 }
 
 export default Skills;
