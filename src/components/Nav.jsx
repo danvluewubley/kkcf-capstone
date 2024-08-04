@@ -2,59 +2,40 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Nav() {
-  const navbarStyle = {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    backgroundColor: "#333",
-    color: "white",
-    padding: "10px 20px",
-  };
-
-  const logoStyle = {
-    fontSize: "24px",
-  };
-
-  const navLinksStyle = {
-    listStyleType: "none",
-    padding: 0,
-    display: "flex",
-    margin: 0,
-  };
-
-  const linkStyle = {
-    color: "white",
-    textDecoration: "none",
-    margin: "0 15px",
-  };
-
-  const linkHoverStyle = {
-    textDecoration: "underline",
-  };
-
   return (
-    <header>
-      <nav style={navbarStyle}>
-        <h1 style={logoStyle}>My Portfolio</h1>
-        <ul style={navLinksStyle}>
-          <li>
-            <Link style={linkStyle} to="/">
-              Home
+    <header className="fixed top-0 left-0 w-full z-10 h-[10%]">
+      <nav className="flex bg-slate-800 text-white w-full h-full">
+        <ul className="flex list-none p-0 m-0 justify-around align-middle w-full h-full">
+          <li className="flex">
+            <Link
+              to="/"
+              className="text-white self-center font-custom text-3xl "
+            >
+              <span className="underline-animation">Home</span>
             </Link>
           </li>
-          <li>
-            <Link style={linkStyle} to="/projects">
-              Projects
+          <li className="flex">
+            <Link
+              to="/projects"
+              className="text-white self-center font-custom text-3xl"
+            >
+              <span className="underline-animation">Projects</span>
             </Link>
           </li>
-          <li>
-            <Link style={linkStyle} to="/skills">
-              Skills
+          <li className="flex">
+            <Link
+              to="/skills"
+              className="text-white self-center font-custom text-3xl"
+            >
+              <span className="underline-animation">Skills</span>
             </Link>
           </li>
-          <li>
-            <Link style={linkStyle} to="/contact">
-              Contact
+          <li className="flex">
+            <Link
+              to="/contact"
+              className="text-white self-center font-custom text-3xl"
+            >
+              <span className="underline-animation">Contact</span>
             </Link>
           </li>
         </ul>

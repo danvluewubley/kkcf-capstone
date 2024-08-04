@@ -4,6 +4,7 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Nav from "./components/Nav";
+import "./styles/index.css";
 
 function App() {
   return (
