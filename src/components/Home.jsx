@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 function Home() {
@@ -12,6 +12,16 @@ function Home() {
     loop: true,
     deleteSpeed: 50,
   });
+
+  useEffect(() => {
+    document.title = "Home";
+    const link =
+      document.querySelector("link[rel*='icon']") ||
+      document.createElement("link");
+    link.rel = "icon";
+    link.href = "/house-chimney.png";
+    document.head.appendChild(link);
+  }, []);
 
   return (
     <div className="flex">

@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 
 const SocialIcon = ({ src, alt, link }) => (
   <img
@@ -10,6 +11,17 @@ const SocialIcon = ({ src, alt, link }) => (
 );
 
 function About() {
+  
+  useEffect(() => {
+    document.title = "About";
+    const link =
+      document.querySelector("link[rel*='icon']") ||
+      document.createElement("link");
+    link.rel = "icon";
+    link.href = "/info.png";
+    document.head.appendChild(link);
+  }, []);
+  
   return (
     <div className="w-screen h-screen flex bg-gray-100">
       <section className="w-1/2 h-screen flex flex-col justify-center items-center">
