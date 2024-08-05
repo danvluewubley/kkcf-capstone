@@ -15,13 +15,16 @@ function Nav() {
             <li key={index}>
               <Link
                 to={path}
-                className={`text-white font-custom text-2xl transition duration-300 ${
-                  location.pathname === path ? "underline" : ""
-                }`}
+                className={`relative text-white font-custom text-2xl transition-all duration-300`}
               >
                 {path === "/"
                   ? "Home"
                   : path.charAt(1).toUpperCase() + path.slice(2)}
+                <span
+                  className={`absolute left-0 right-0 bottom-0 h-0.5 bg-white transition-all duration-300 transform scale-x-0 group-hover:scale-x-100 ${
+                    location.pathname === path ? "scale-x-100" : ""
+                  }`}
+                />
               </Link>
             </li>
           ))}
