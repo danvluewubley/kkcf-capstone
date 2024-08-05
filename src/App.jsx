@@ -7,7 +7,7 @@ import "./styles/index.css";
 const Home = lazy(() => import("./components/Home"));
 const Projects = lazy(() => import("./components/Projects"));
 const Skills = lazy(() => import("./components/Skills"));
-const Contact = lazy(() => import("./components/Contact"));
+const About = lazy(() => import("./components/About"))
 
 function App() {
   return (
@@ -17,9 +17,9 @@ function App() {
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/skills" element={<Skills />} />
-            <Route path="/contact" element={<Contact />} />
           </Routes>
         </Suspense>
       </main>

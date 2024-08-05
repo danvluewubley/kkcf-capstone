@@ -16,6 +16,14 @@ function Nav() {
           </li>
           <li className="flex">
             <Link
+              to="/about"
+              className="text-white self-center font-custom text-3xl"
+            >
+              <span className="underline-animation">About</span>
+            </Link>
+          </li>
+          <li className="flex">
+            <Link
               to="/projects"
               className="text-white self-center font-custom text-3xl"
             >
@@ -28,14 +36,6 @@ function Nav() {
               className="text-white self-center font-custom text-3xl"
             >
               <span className="underline-animation">Skills</span>
-            </Link>
-          </li>
-          <li className="flex">
-            <Link
-              to="/contact"
-              className="text-white self-center font-custom text-3xl"
-            >
-              <span className="underline-animation">Contact</span>
             </Link>
           </li>
         </ul>
