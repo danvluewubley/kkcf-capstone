@@ -14,14 +14,14 @@ export function CarouselWithContent() {
             <Typography
               variant="h1"
               color="white"
-              className="mb-4 text-3xl md:text-4xl lg:text-5xl"
+              className="mb-4 text-3xl md:text-4xl lg:text-5xl font-custom"
             >
               Sonar Machine Learning
             </Typography>
             <Typography
               variant="lead"
               color="white"
-              className="mb-12 opacity-80"
+              className="mb-12 opacity-80 font-custom"
             >
               Developed a sonar classification system using machine learning
               algorithms in Python. Utilized Seaborn and Sklearn for model
@@ -32,9 +32,9 @@ export function CarouselWithContent() {
             <Typography
               variant="lead"
               color="white"
-              className="mb-12 opacity-80"
+              className="mb-12 opacity-80 font-custom font-bold"
             >
-              <strong>Languages/Frameworks: Python, JupyterNotebook</strong>
+              Languages/Frameworks: Python, JupyterNotebook
             </Typography>
             <div className="flex justify-center gap-2">
               <a
@@ -60,14 +60,14 @@ export function CarouselWithContent() {
             <Typography
               variant="h1"
               color="white"
-              className="mb-4 text-3xl md:text-4xl lg:text-5xl"
+              className="mb-4 text-3xl md:text-4xl lg:text-5xl font-custom"
             >
               Budgeting Made Simple
             </Typography>
             <Typography
               variant="lead"
               color="white"
-              className="mb-12 opacity-80"
+              className="mb-12 opacity-80 font-custom"
             >
               A user-friendly application designed to help individuals track
               their expenses, set budgets, and manage their finances
@@ -78,11 +78,9 @@ export function CarouselWithContent() {
             <Typography
               variant="lead"
               color="white"
-              className="mb-12 opacity-80"
+              className="mb-12 opacity-80 font-custom font-bold"
             >
-              <strong>
-                Languages/Frameworks: Python, Flask, HTML, CSS, JavaScript
-              </strong>
+              Languages/Frameworks: Python, Flask, SQLite, HTML, CSS, JavaScript
             </Typography>
             <div className="flex justify-center gap-2">
               <a
@@ -108,14 +106,14 @@ export function CarouselWithContent() {
             <Typography
               variant="h1"
               color="white"
-              className="mb-4 text-3xl md:text-4xl lg:text-5xl"
+              className="mb-4 text-3xl md:text-4xl lg:text-5xl font-custom"
             >
               Weather App
             </Typography>
             <Typography
               variant="lead"
               color="white"
-              className="mb-12 opacity-80"
+              className="mb-12 opacity-80 font-custom"
             >
               A dynamic weather application built with React, providing
               real-time updates on wind conditions, high and low temperatures,
@@ -125,13 +123,58 @@ export function CarouselWithContent() {
             <Typography
               variant="lead"
               color="white"
-              className="mb-12 opacity-80"
+              className="mb-12 opacity-80 font-custom font-bold"
             >
-              <strong>Languages/Frameworks: JavaScript, React.js, CSS</strong>
+              Languages/Frameworks: JavaScript, React.js, CSS
             </Typography>
             <div className="flex justify-center gap-2">
               <a
                 href="https://github.com/danvluewubley/weather-app-react"
+                target="_blank"
+              >
+                <Button size="lg" color="white">
+                  View Project
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="relative h-full w-full">
+        <img
+          src="https://wallpapers.com/images/hd/code-letters-screen-blur-multi-colored-labels-words-text-sw1lfc92pm6v67bh.webp"
+          alt="image 1"
+          className="h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
+          <div className="w-3/4 text-center md:w-2/4">
+            <Typography
+              variant="h1"
+              color="white"
+              className="mb-4 text-3xl md:text-4xl lg:text-5xl font-custom"
+            >
+              Portfolio App
+            </Typography>
+            <Typography
+              variant="lead"
+              color="white"
+              className="mb-12 opacity-80 font-custom"
+            >
+              A sleek and modern portfolio website designed to showcase my
+              projects and skills. Built with cutting-edge web technologies,
+              this app highlights my expertise in web development and provides
+              an engaging user experience.
+            </Typography>
+            <Typography
+              variant="lead"
+              color="white"
+              className="mb-12 opacity-80 font-custom font-bold"
+            >
+              Languages/Frameworks: JavaScript, React.js, CSS, Tailwind
+            </Typography>
+            <div className="flex justify-center gap-2">
+              <a
+                href="https://github.com/danvluewubley/portfolio-react"
                 target="_blank"
               >
                 <Button size="lg" color="white">
