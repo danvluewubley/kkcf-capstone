@@ -34,7 +34,8 @@ export function CarouselWithContent() {
               color="white"
               className="mb-12 opacity-80 font-custom font-bold"
             >
-              Languages/Frameworks: Python, JupyterNotebook
+              <span className="underline">Languages/Frameworks</span>: Python,
+              JupyterNotebook
             </Typography>
             <div className="flex justify-center gap-2">
               <a
@@ -80,7 +81,8 @@ export function CarouselWithContent() {
               color="white"
               className="mb-12 opacity-80 font-custom font-bold"
             >
-              Languages/Frameworks: Python, Flask, SQLite, HTML, CSS, JavaScript
+              <span className="underline">Languages/Frameworks</span>: Python,
+              Flask, SQLite, HTML, CSS, JavaScript
             </Typography>
             <div className="flex justify-center gap-2">
               <a
@@ -125,7 +127,8 @@ export function CarouselWithContent() {
               color="white"
               className="mb-12 opacity-80 font-custom font-bold"
             >
-              Languages/Frameworks: JavaScript, React.js, CSS
+              <span className="underline">Languages/Frameworks</span>:
+              JavaScript, React.js, CSS
             </Typography>
             <div className="flex justify-center gap-2">
               <a
@@ -142,7 +145,7 @@ export function CarouselWithContent() {
       </div>
       <div className="relative h-full w-full">
         <img
-          src="https://wallpapers.com/images/hd/code-letters-screen-blur-multi-colored-labels-words-text-sw1lfc92pm6v67bh.webp"
+          src="https://wallpapers.com/images/featured-full/coding-background-9izlympnd0ovmpli.jpg"
           alt="image 1"
           className="h-full w-full object-cover"
         />
@@ -170,7 +173,8 @@ export function CarouselWithContent() {
               color="white"
               className="mb-12 opacity-80 font-custom font-bold"
             >
-              Languages/Frameworks: JavaScript, React.js, CSS, Tailwind
+              <span className="underline">Languages/Frameworks</span>:
+              JavaScript, React.js, CSS, Tailwind
             </Typography>
             <div className="flex justify-center gap-2">
               <a
