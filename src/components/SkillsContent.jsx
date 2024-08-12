@@ -1,17 +1,7 @@
-import { useEffect } from "react";
-import SkillList from "./SkillList";
+import React from "react";
+import SkillList from "../components/SkillList";
 
-function Skills() {
-  useEffect(() => {
-    document.title = "Skills";
-    const link =
-      document.querySelector("link[rel*='icon']") ||
-      document.createElement("link");
-    link.rel = "icon";
-    link.href = "/user-skill-gear.png";
-    document.head.appendChild(link);
-  }, []);
-
+function SkillsContent() {
   const technicalSkills = [
     { src: "html-5.png", alt: "html 5 icon", text: "HTML5" },
     { src: "css-3.png", alt: "css 3 icon", text: "CSS3" },
@@ -23,7 +13,6 @@ function Skills() {
     { src: "flask.png", alt: "flask icon", text: "Flask" },
     { src: "numpy.png", alt: "numpy icon", text: "NumPy" },
     { src: "pandas.png", alt: "pandas icon", text: "Pandas" },
-    { src: "", alt: "", text: "Matplotlib" },
   ];
 
   const otherSkills = [
@@ -97,4 +86,4 @@ function Skills() {
   );
 }
 
-export default Skills;
+export default SkillsContent;

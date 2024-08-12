@@ -42,8 +42,8 @@ export function CarouselWithContent() {
                 href="https://github.com/danvluewubley/sonar-machine-learning"
                 target="_blank"
               >
-                <Button size="lg" color="white">
-                  View Project
+                <Button size="lg" color="white" className="hover:scale-[1.1]">
+                  {"</> CODE"}
                 </Button>
               </a>
             </div>
@@ -89,8 +89,8 @@ export function CarouselWithContent() {
                 href="https://github.com/danvluewubley/hackathon-budget-app"
                 target="_blank"
               >
-                <Button size="lg" color="white">
-                  View Project
+                <Button size="lg" color="white" className="hover:scale-[1.1]">
+                  {"</> CODE"}
                 </Button>
               </a>
             </div>
@@ -135,8 +135,16 @@ export function CarouselWithContent() {
                 href="https://github.com/danvluewubley/weather-app-react"
                 target="_blank"
               >
-                <Button size="lg" color="white">
-                  View Project
+                <Button size="lg" color="white" className="hover:scale-[1.1]">
+                  {"</> CODE"}
+                </Button>
+              </a>
+              <a
+                href="https://weather-app-react-dckm.onrender.com"
+                target="_blank"
+              >
+                <Button size="lg" color="black" className="hover:scale-[1.1]">
+                  DEMO
                 </Button>
               </a>
             </div>

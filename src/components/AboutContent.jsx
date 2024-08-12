@@ -1,50 +1,25 @@
 import React from "react";
-import { useEffect } from "react";
+import SocialIcon from "../components/SocialIcon";
 
-const SocialIcon = ({ src, alt, link }) => (
-  <img
-    src={src}
-    alt={alt}
-    className="cursor-pointer w-24 hover:opacity-80 transition-opacity duration-300"
-    onClick={() => window.open(link, "_blank")}
-  />
-);
-
-function About() {
-  
-  useEffect(() => {
-    document.title = "About";
-    const link =
-      document.querySelector("link[rel*='icon']") ||
-      document.createElement("link");
-    link.rel = "icon";
-    link.href = "/info.png";
-    document.head.appendChild(link);
-  }, []);
-
+function AboutContent() {
   const socialLinks = [
     {
-      src: "/linkedin.png",
+      src: "linkedin.png",
       alt: "LinkedIn profile",
       link: "https://www.linkedin.com/in/daniel-wu-b1a64929a/",
     },
     {
-      src: "/instagram.png",
-      alt: "Instagram profile",
-      link: "https://www.instagram.com/danvlue.wubley/",
+      src: "github.png",
+      alt: "GitHub profile",
+      link: "https://github.com/danvluewubley",
     },
     {
-      src: "/github.png",
-      alt: "GitHub profile",
-      link: "https://github.com/your-github-username",
-    }, // Update this link
-    {
-      src: "/gmail.png",
+      src: "gmail.png",
       alt: "Email Daniel",
       link: "mailto:danielw72908@gmail.com",
     },
   ];
-  
+
   return (
     <div className="w-screen h-[calc(100vh-4rem)] flex bg-gray-100">
       <section className="w-1/2 h-full flex flex-col justify-center items-center">
@@ -76,4 +51,4 @@ function About() {
   );
 }
 
-export default About;
+export default AboutContent;
