@@ -1,5 +1,6 @@
 import React from "react";
 import SkillList from "../components/SkillList";
+import "../styles/drop.css"
 
 function SkillsContent() {
   const technicalSkills = [
@@ -46,7 +47,7 @@ function SkillsContent() {
 
   return (
     <section className="flex relative w-screen max-h-screen bg-gray-100">
-      <div className="flex justify-center items-center w-1/3">
+      <div className="flex justify-center items-center w-1/3 card">
         <div className="flex flex-col justify-center items-center w-[90%] h-[80%] bg-gray-300 rounded-lg transform hover:-translate-y-[1px] hover:scale-[1.03] transition-transform">
           <h2 className="text-4xl font-custom text-center pb-5 font-bold">
             Technical Skills
@@ -58,7 +59,7 @@ function SkillsContent() {
           </ul>
         </div>
       </div>
-      <div className="flex justify-center items-center w-1/3">
+      <div className="flex justify-center items-center w-1/3 card">
         <div className="flex flex-col justify-center items-center w-[90%] h-[80%] bg-gray-300 rounded-lg transform hover:-translate-y-[1px] hover:scale-[1.03] transition-transform">
           <h2 className="text-4xl font-custom text-center pb-5 font-bold">
             Other Skills
@@ -70,7 +71,7 @@ function SkillsContent() {
           </ul>
         </div>
       </div>
-      <div className="flex justify-center items-center w-1/3">
+      <div className="flex justify-center items-center w-1/3 card">
         <div className="flex flex-col justify-center items-center w-[90%] h-[80%] bg-gray-300 rounded-lg transform hover:-translate-y-[1px] hover:scale-[1.03] transition-transform">
           <h2 className="text-4xl font-custom text-center pb-5 font-bold">
             Programming Tools

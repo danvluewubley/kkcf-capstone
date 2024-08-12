@@ -1,5 +1,6 @@
 import React from "react";
 import SocialIcon from "../components/SocialIcon";
+import "../styles/slide.css"
 
 function AboutContent() {
   const socialLinks = [
@@ -21,8 +22,8 @@ function AboutContent() {
   ];
 
   return (
-    <div className="w-screen h-[calc(100vh-4rem)] flex bg-gray-100">
-      <section className="w-1/2 h-full flex flex-col justify-center items-center">
+    <div className="w-screen h-[calc(100vh-4rem)] flex bg-gray-100 overflow-hidden">
+      <section className="w-1/2 h-full flex flex-col justify-center items-center slide-from-left">
         <h1 className="text-5xl font-custom font-bold pb-4">About</h1>
         <p className="font-custom text-2xl text-center w-[90%] mx-auto">
           I'm Daniel, a passionate tech enthusiast with a strong interest in
@@ -40,7 +41,7 @@ function AboutContent() {
           ))}
         </div>
       </section>
-      <aside className="w-1/2 flex justify-center items-center">
+      <aside className="w-1/2 flex justify-center items-center slide-from-right">
         <img
           src="/headshot.jpg"
           alt="headshot"
