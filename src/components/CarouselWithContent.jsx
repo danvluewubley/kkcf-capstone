@@ -2,7 +2,7 @@ import { Carousel, Typography, Button } from "@material-tailwind/react";
 
 export function CarouselWithContent() {
   return (
-    <Carousel className="rounded-none h-screen w-screen">
+    <Carousel className="rounded-none h-[calc(100vh-4rem)] w-screen">
       <div className="relative h-full w-full">
         <img
           src="https://wallpapers.com/images/featured-full/coding-background-9izlympnd0ovmpli.jpg"

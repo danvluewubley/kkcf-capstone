@@ -24,7 +24,7 @@ function Home() {
   }, []);
 
   return (
-    <div className="flex">
+    <div className="flex relative max-h-screen">
       <section className="flex flex-col justify-center items-start w-full md:w-1/2 px-6 md:px-12 bg-gray-100 font-custom">
         <h1 className="text-7xl leading-normal mb-4">Hello, I'm Daniel</h1>
         <h2 className="text-5xl leading-normal">
@@ -40,7 +40,7 @@ function Home() {
           the tech field.
         </p>
       </section>
-      <aside className="h-[100vh] flex flex-col justify-center items-center bg-gray-100 font-custom relative w-1/2">
+      <aside className="h-full flex flex-col justify-center items-center bg-gray-100 font-custom relative w-1/2">
         <img
           src="/coding-image.jpg"
           alt="placeholder"

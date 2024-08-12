@@ -21,10 +21,33 @@ function About() {
     link.href = "/info.png";
     document.head.appendChild(link);
   }, []);
+
+  const socialLinks = [
+    {
+      src: "/linkedin.png",
+      alt: "LinkedIn profile",
+      link: "https://www.linkedin.com/in/daniel-wu-b1a64929a/",
+    },
+    {
+      src: "/instagram.png",
+      alt: "Instagram profile",
+      link: "https://www.instagram.com/danvlue.wubley/",
+    },
+    {
+      src: "/github.png",
+      alt: "GitHub profile",
+      link: "https://github.com/your-github-username",
+    }, // Update this link
+    {
+      src: "/gmail.png",
+      alt: "Email Daniel",
+      link: "mailto:danielw72908@gmail.com",
+    },
+  ];
   
   return (
-    <div className="w-screen h-screen flex bg-gray-100">
-      <section className="w-1/2 h-screen flex flex-col justify-center items-center">
+    <div className="w-screen h-[calc(100vh-4rem)] flex bg-gray-100">
+      <section className="w-1/2 h-full flex flex-col justify-center items-center">
         <h1 className="text-5xl font-custom font-bold pb-4">About</h1>
         <p className="font-custom text-2xl text-center w-[90%] mx-auto">
           I'm Daniel, a passionate tech enthusiast with a strong interest in
@@ -37,26 +60,9 @@ function About() {
         </p>
         <h2 className="text-5xl font-custom font-bold pt-10 pb-5">Contact</h2>
         <div className="grid grid-flow-col gap-4 w-1/2 justify-around">
-          <SocialIcon
-            src="/linkedin.png"
-            alt="LinkedIn profile"
-            link="https://www.linkedin.com/in/daniel-wu-b1a64929a/"
-          />
-          <SocialIcon
-            src="/instagram.png"
-            alt="Instagram profile"
-            link="https://www.instagram.com/danvlue.wubley/"
-          />
-          <SocialIcon
-            src="/github.png"
-            alt="GitHub profile"
-            link="https://github.com/your-github-username" // Update this link
-          />
-          <SocialIcon
-            src="/gmail.png"
-            alt="Email Daniel"
-            link="mailto:danielw72908@gmail.com"
-          />
+          {socialLinks.map((social, index) => (
+            <SocialIcon key={index} {...social} />
+          ))}
         </div>
       </section>
       <aside className="w-1/2 flex justify-center items-center">
