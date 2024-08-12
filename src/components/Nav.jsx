@@ -5,7 +5,7 @@ function Nav() {
   const location = useLocation();
 
   return (
-    <header className="fixed top-0 left-0 w-full z-10 h-[10%]">
+    <header className="w-full z-10">
       <nav className="flex items-center justify-between bg-blue-gray-800 text-white px-6 py-4">
         <div className="text-3xl font-custom">
           <Link to="/">My Portfolio</Link>

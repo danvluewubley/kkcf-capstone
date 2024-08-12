@@ -143,52 +143,6 @@ export function CarouselWithContent() {
           </div>
         </div>
       </div>
-      <div className="relative h-full w-full">
-        <img
-          src="https://wallpapers.com/images/featured-full/coding-background-9izlympnd0ovmpli.jpg"
-          alt="image 1"
-          className="h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
-          <div className="w-3/4 text-center md:w-2/4">
-            <Typography
-              variant="h1"
-              color="white"
-              className="mb-4 text-3xl md:text-4xl lg:text-5xl font-custom"
-            >
-              Portfolio App
-            </Typography>
-            <Typography
-              variant="lead"
-              color="white"
-              className="mb-12 opacity-80 font-custom"
-            >
-              A sleek and modern portfolio website designed to showcase my
-              projects and skills. Built with cutting-edge web technologies,
-              this app highlights my expertise in web development and provides
-              an engaging user experience.
-            </Typography>
-            <Typography
-              variant="lead"
-              color="white"
-              className="mb-12 opacity-80 font-custom font-bold"
-            >
-              <span className="underline">Languages/Frameworks</span>:
-              JavaScript, React.js, CSS, Tailwind
-            </Typography>
-            <div className="flex justify-center gap-2">
-              <a
-                href="https://github.com/danvluewubley/portfolio-react"
-                target="_blank"
-              >
-                <Button size="lg" color="white">
-                  View Project
-                </Button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
     </Carousel>
   );
 }
