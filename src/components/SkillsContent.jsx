@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/drop.css";
 import SkillsListCard from "./SkillsListCard";
 import { useDarkMode } from "../context/DarkModeContext";
+import DarkModeToggleButton from "./DarkModeToggleButton";
 
 function SkillsContent() {
   const { darkMode } = useDarkMode();
@@ -58,7 +59,7 @@ function SkillsContent() {
 
   return (
     <div className={`${darkMode && "dark"}`}>
-      <section className="w-screen h-[calc(100vh-4rem)] flex bg-gray-100 overflow-hidden dark:bg-[#121212]">
+      <section className="w-screen h-[calc(100vh-4rem)] flex bg-gray-100 dark:bg-[#121212] flex-col md:flex-row">
         <SkillsListCard
           cardName={"Technical Skills"}
           skillsList={technicalSkills}
@@ -66,6 +67,7 @@ function SkillsContent() {
         <SkillsListCard cardName={"Other Skills"} skillsList={otherSkills} />
         <SkillsListCard cardName={"Programming Tools"} skillsList={tools} />
       </section>
+      <DarkModeToggleButton />
     </div>
   );
 }

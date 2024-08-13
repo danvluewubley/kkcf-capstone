@@ -2,6 +2,7 @@ import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { useDarkMode } from "../context/DarkModeContext";
 import DarkModeToggleButton from "../components/DarkModeToggleButton";
+import { Link } from "react-router-dom";
 
 function HomeContent() {
   const { darkMode } = useDarkMode();
@@ -38,6 +39,9 @@ function HomeContent() {
             new technologies and constantly seek opportunities to learn and grow
             in the tech field.
           </p>
+          <button className="bg-red-500 hover:bg-red-600 dark:bg-red-600 dark:hover:bg-red-500 text-white font-bold py-2 px-4 rounded mt-4">
+            <Link to="/contact">Contact Me</Link>
+          </button>
         </section>
         <aside className="h-full md:flex flex-col justify-center items-center font-custom relative flex-grow hidden">
           <img

@@ -1,11 +1,11 @@
 import React from "react";
-import { CarouselWithContent } from "../components/CarouselWithContent";
+import ProjectContent from "../components/ProjectContent";
 import usePageTitleAndFavicon from "../hooks/useUpdateTitle";
 
 function Projects() {
   usePageTitleAndFavicon("Projects", "diagram-project.png");
 
-  return <CarouselWithContent />;
+  return <ProjectContent />;
 }
 
 export default Projects;

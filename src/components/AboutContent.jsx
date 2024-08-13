@@ -28,7 +28,6 @@ function AboutContent() {
   return (
     <div className={`${darkMode && "dark"}`}>
       <div className="w-screen md:h-[calc(100vh-4rem)] flex bg-gray-100 overflow-hidden dark:bg-[#121212]">
-        {/* Section with flex-grow */}
         <section className="flex flex-col justify-center items-center w-1/2 h-full slide-from-left flex-grow">
           <h1 className="md:text-5xl text-2xl font-custom font-bold pb-4 dark:text-gray-300 pt-10">
             About
@@ -58,7 +57,6 @@ function AboutContent() {
           </div>
         </section>
 
-        {/* Aside with flex-grow */}
         <aside className="w-1/2 justify-center items-center slide-from-right hidden md:flex flex-grow">
           <img
             src="/headshot.jpg"
