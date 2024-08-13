@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button, Typography, Textarea } from "@material-tailwind/react";
 import emailjs from "emailjs-com";
 
@@ -8,6 +8,10 @@ export const EmailForm = () => {
     email: "",
     message: "",
   });
+
+  useEffect(() => {
+    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
