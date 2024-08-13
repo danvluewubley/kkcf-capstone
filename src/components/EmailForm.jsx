@@ -16,7 +16,6 @@ export const EmailForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Call your emailjs service here
     emailjs
       .send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -27,7 +26,6 @@ export const EmailForm = () => {
       .then(
         (response) => {
           console.log("SUCCESS!", response.status, response.text);
-          // Optionally, reset the form after sending
           setFormData({ name: "", email: "", message: "" });
         },
         (err) => {
@@ -37,8 +35,8 @@ export const EmailForm = () => {
   };
 
   return (
-    <section className="flex justify-center bg-gray-100">
-      <div className="w-[30%] p-4 bg-white rounded-lg shadow-md h-1/2 my-auto">
+    <section className="flex justify-center bg-gray-100 dark:bg-[#121212] h-[calc(100vh-4rem)]">
+      <div className="md:w-[30%] p-4 bg-white dark:bg-gray-300 rounded-lg shadow-md md:h-1/2 my-auto dark:shadow-white">
         <Typography variant="h5" color="blue-gray">
           Contact Me
         </Typography>
@@ -50,7 +48,7 @@ export const EmailForm = () => {
             value={formData.name}
             onChange={handleChange}
             required
-            className="border border-gray-300 p-2 mb-4"
+            className="border border-gray-300 p-2 mb-4 dark:bg-gray-300 dark:border-gray-900 placeholder-gray-500 dark:placeholder-black"
           />
           <input
             type="email"
@@ -59,7 +57,7 @@ export const EmailForm = () => {
             value={formData.email}
             onChange={handleChange}
             required
-            className="border border-gray-300 p-2 mb-4"
+            className="border border-gray-300 p-2 mb-4 dark:bg-gray-300 dark:border-gray-900 placeholder-gray-500 dark:placeholder-black"
           />
           <Textarea
             name="message"
@@ -67,9 +65,9 @@ export const EmailForm = () => {
             value={formData.message}
             onChange={handleChange}
             required
-            className="mb-4"
+            className="mb-4 dark:border-gray-900 placeholder-gray-500 dark:placeholder-black"
           />
-          <div className="flex justify-end">
+          <div className="flex justify-end md:mt-20">
             <Button type="submit" color="blue">
               Send
             </Button>

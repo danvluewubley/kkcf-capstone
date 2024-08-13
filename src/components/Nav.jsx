@@ -11,7 +11,7 @@ function Nav() {
 
   return (
     <header className="w-full z-10 h-16">
-      <nav className="bg-blue-gray-800 text-white px-6 py-4">
+      <nav className="bg-gray-800 text-white px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="text-3xl font-custom">
             <Link to="/">My Portfolio</Link>
@@ -43,23 +43,31 @@ function Nav() {
           {/* Desktop Menu */}
           <div className="hidden md:flex md:ml-auto">
             <ul className="flex list-none p-0 m-0 space-x-8">
-              {["/", "/about", "/projects", "/skills"].map((path, index) => (
-                <li key={index}>
-                  <Link
-                    to={path}
-                    className={`relative text-white font-custom text-2xl transition-all duration-300`}
-                  >
-                    {path === "/"
-                      ? "Home"
-                      : path.charAt(1).toUpperCase() + path.slice(2)}
-                    <span
-                      className={`absolute left-0 right-0 bottom-0 h-0.5 bg-white transition-all duration-300 transform scale-x-0 group-hover:scale-x-100 ${
-                        location.pathname === path ? "scale-x-100" : ""
+              {["/", "/about", "/projects", "/skills", "/contact"].map(
+                (path, index) => (
+                  <li key={index}>
+                    <Link
+                      to={path}
+                      className={`relative text-white font-custom text-2xl transition-all duration-300 ${
+                        path === "/contact"
+                          ? "bg-red-500 text-white px-4 py-2 rounded"
+                          : ""
                       }`}
-                    />
-                  </Link>
-                </li>
-              ))}
+                    >
+                      {path === "/"
+                        ? "Home"
+                        : path.charAt(1).toUpperCase() + path.slice(2)}
+                      <span
+                        className={`absolute left-0 right-0 bottom-0 h-0.5 bg-white transition-all duration-300 transform scale-x-0 ${
+                          location.pathname === path && path !== "/contact"
+                            ? "scale-x-100"
+                            : ""
+                        }`}
+                      />
+                    </Link>
+                  </li>
+                )
+              )}
             </ul>
           </div>
         </div>
@@ -68,24 +76,31 @@ function Nav() {
         {isMenuOpen && (
           <div className="md:hidden mt-4">
             <ul className="flex flex-col list-none p-0 m-0 space-y-2">
-              {["/", "/about", "/projects", "/skills"].map((path, index) => (
-                <li key={index}>
-                  <Link
-                    to={path}
-                    className={`relative text-white font-custom text-2xl transition-all duration-300`}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {path === "/"
-                      ? "Home"
-                      : path.charAt(1).toUpperCase() + path.slice(2)}
-                    <span
-                      className={`absolute left-0 right-0 bottom-0 h-0.5 bg-white transition-all duration-300 transform scale-x-0 group-hover:scale-x-100 ${
-                        location.pathname === path ? "scale-x-100" : ""
+              {["/", "/about", "/projects", "/skills", "/contact"].map(
+                (path, index) => (
+                  <li key={index}>
+                    <Link
+                      to={path}
+                      className={`relative text-white font-custom text-2xl transition-all duration-300 ${
+                        path === "/contact"
+                          ? "bg-red-500 text-white px-4 py-1 rounded"
+                          : ""
                       }`}
-                    />
-                  </Link>
-                </li>
-              ))}
+                    >
+                      {path === "/"
+                        ? "Home"
+                        : path.charAt(1).toUpperCase() + path.slice(2)}
+                      <span
+                        className={`absolute left-0 right-0 bottom-0 h-0.5 bg-white transition-all duration-300 transform scale-x-0 ${
+                          location.pathname === path && path !== "/contact"
+                            ? "scale-x-100"
+                            : ""
+                        }`}
+                      />
+                    </Link>
+                  </li>
+                )
+              )}
             </ul>
           </div>
         )}

@@ -1,10 +1,11 @@
-import React from 'react'
-import { EmailForm } from '../components/EmailModal'
+import React from "react";
+import usePageTitleAndFavicon from "../hooks/useUpdateTitle";
+import EmailContent from "../components/EmailContent";
 
 function Contact() {
-  return (
-    <EmailForm />
-  )
+  usePageTitleAndFavicon("Home", "mail.png");
+
+  return <EmailContent />;
 }
 
-export default Contact
+export default Contact;
