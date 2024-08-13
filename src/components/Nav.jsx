@@ -40,34 +40,55 @@ function Nav() {
               />
             </svg>
           </button>
+          {/* Desktop Menu */}
+          <div className="hidden md:flex md:ml-auto">
+            <ul className="flex list-none p-0 m-0 space-x-8">
+              {["/", "/about", "/projects", "/skills"].map((path, index) => (
+                <li key={index}>
+                  <Link
+                    to={path}
+                    className={`relative text-white font-custom text-2xl transition-all duration-300`}
+                  >
+                    {path === "/"
+                      ? "Home"
+                      : path.charAt(1).toUpperCase() + path.slice(2)}
+                    <span
+                      className={`absolute left-0 right-0 bottom-0 h-0.5 bg-white transition-all duration-300 transform scale-x-0 group-hover:scale-x-100 ${
+                        location.pathname === path ? "scale-x-100" : ""
+                      }`}
+                    />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-        <div
-          className={`${
-            isMenuOpen ? "block" : "hidden"
-          } w-full md:block md:w-auto mt-4 md:mt-0`}
-          id="navbar-default"
-        >
-          <ul className="flex flex-col md:flex-row list-none p-0 m-0 space-y-2 md:space-y-0 md:space-x-8">
-            {["/", "/about", "/projects", "/skills"].map((path, index) => (
-              <li key={index}>
-                <Link
-                  to={path}
-                  className={`relative text-white font-custom text-2xl transition-all duration-300`}
-                  onClick={() => setIsMenuOpen(false)} // Close the menu when a link is clicked
-                >
-                  {path === "/"
-                    ? "Home"
-                    : path.charAt(1).toUpperCase() + path.slice(2)}
-                  <span
-                    className={`absolute left-0 right-0 bottom-0 h-0.5 bg-white transition-all duration-300 transform scale-x-0 group-hover:scale-x-100 ${
-                      location.pathname === path ? "scale-x-100" : ""
-                    }`}
-                  />
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden mt-4">
+            <ul className="flex flex-col list-none p-0 m-0 space-y-2">
+              {["/", "/about", "/projects", "/skills"].map((path, index) => (
+                <li key={index}>
+                  <Link
+                    to={path}
+                    className={`relative text-white font-custom text-2xl transition-all duration-300`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {path === "/"
+                      ? "Home"
+                      : path.charAt(1).toUpperCase() + path.slice(2)}
+                    <span
+                      className={`absolute left-0 right-0 bottom-0 h-0.5 bg-white transition-all duration-300 transform scale-x-0 group-hover:scale-x-100 ${
+                        location.pathname === path ? "scale-x-100" : ""
+                      }`}
+                    />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </nav>
     </header>
   );

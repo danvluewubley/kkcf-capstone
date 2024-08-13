@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/drop.css";
 import SkillsListCard from "./SkillsListCard";
-import { useDarkMode } from "./DarkModeContext";
+import { useDarkMode } from "../context/DarkModeContext";
 
 function SkillsContent() {
   const { darkMode } = useDarkMode();
@@ -42,7 +42,11 @@ function SkillsContent() {
       text: "GitHub Pages",
     },
     { src: "figma.png", alt: "figma icon", text: "Figma" },
-    { src: darkMode ? "github-dark.png" : "github-light.png", alt: "github icon", text: "GitHub" },
+    {
+      src: darkMode ? "github-dark.png" : "github-light.png",
+      alt: "github icon",
+      text: "GitHub",
+    },
     { src: "git.png", alt: "git icon", text: "Git" },
     { src: "postman.png", alt: "postman icon", text: "Postman" },
     {
