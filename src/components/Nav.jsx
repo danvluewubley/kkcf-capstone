@@ -1,7 +1,11 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useDarkMode } from "./DarkModeContext";
+import DarkModeToggleButton from "../components/DarkModeToggleButton";
 
 function Nav() {
+  const { darkMode } = useDarkMode();
+
   const location = useLocation();
 
   return (
@@ -30,6 +34,7 @@ function Nav() {
           ))}
         </ul>
       </nav>
+      <DarkModeToggleButton />
     </header>
   );
 }

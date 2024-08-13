@@ -11,3 +11,7 @@
     @apply absolute content-[''] w-full h-1 left-0 bottom-[-4px] bg-blue-gray-500 scale-x-0 hover:scale-x-100 transition-transform duration-300 origin-bottom-left;
   }
 }
+
+* {
+  @apply transition-colors duration-200
+}

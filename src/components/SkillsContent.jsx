@@ -1,8 +1,11 @@
 import React from "react";
-import SkillList from "../components/SkillList";
-import "../styles/drop.css"
+import "../styles/drop.css";
+import SkillsListCard from "./SkillsListCard";
+import { useDarkMode } from "./DarkModeContext";
 
 function SkillsContent() {
+  const { darkMode } = useDarkMode();
+
   const technicalSkills = [
     { src: "html-5.png", alt: "html 5 icon", text: "HTML5" },
     { src: "css-3.png", alt: "css 3 icon", text: "CSS3" },
@@ -33,9 +36,13 @@ function SkillsContent() {
       alt: "illustrator icon",
       text: "Adobe Illustrator",
     },
-    { src: "github.png", alt: "github icon", text: "GitHub Pages" },
+    {
+      src: darkMode ? "github-dark.png" : "github-light.png",
+      alt: "github icon",
+      text: "GitHub Pages",
+    },
     { src: "figma.png", alt: "figma icon", text: "Figma" },
-    { src: "github.png", alt: "github icon", text: "GitHub" },
+    { src: darkMode ? "github-dark.png" : "github-light.png", alt: "github icon", text: "GitHub" },
     { src: "git.png", alt: "git icon", text: "Git" },
     { src: "postman.png", alt: "postman icon", text: "Postman" },
     {
@@ -46,44 +53,16 @@ function SkillsContent() {
   ];
 
   return (
-    <section className="flex relative w-screen max-h-screen bg-gray-100">
-      <div className="flex justify-center items-center w-1/3 card">
-        <div className="flex flex-col justify-center items-center w-[90%] h-[80%] bg-gray-300 rounded-lg transform hover:-translate-y-[1px] hover:scale-[1.03] transition-transform">
-          <h2 className="text-4xl font-custom text-center pb-5 font-bold">
-            Technical Skills
-          </h2>
-          <ul className="text-2xl font-custom text-center">
-            {technicalSkills.map((skill, index) => (
-              <SkillList key={index} {...skill} />
-            ))}
-          </ul>
-        </div>
-      </div>
-      <div className="flex justify-center items-center w-1/3 card">
-        <div className="flex flex-col justify-center items-center w-[90%] h-[80%] bg-gray-300 rounded-lg transform hover:-translate-y-[1px] hover:scale-[1.03] transition-transform">
-          <h2 className="text-4xl font-custom text-center pb-5 font-bold">
-            Other Skills
-          </h2>
-          <ul className="text-2xl font-custom text-center">
-            {otherSkills.map((skill, index) => (
-              <SkillList key={index} {...skill} />
-            ))}
-          </ul>
-        </div>
-      </div>
-      <div className="flex justify-center items-center w-1/3 card">
-        <div className="flex flex-col justify-center items-center w-[90%] h-[80%] bg-gray-300 rounded-lg transform hover:-translate-y-[1px] hover:scale-[1.03] transition-transform">
-          <h2 className="text-4xl font-custom text-center pb-5 font-bold">
-            Programming Tools
-          </h2>
-          <ul className="text-2xl font-custom text-center">
-            {tools.map((skill, index) => (
-              <SkillList key={index} {...skill} />
-            ))}
-          </ul>
-        </div>
-      </div>
-    </section>
+    <div className={`${darkMode && "dark"}`}>
+      <section className="w-screen h-[calc(100vh-4rem)] flex bg-gray-100 overflow-hidden dark:bg-[#121212]">
+        <SkillsListCard
+          cardName={"Technical Skills"}
+          skillsList={technicalSkills}
+        />
+        <SkillsListCard cardName={"Other Skills"} skillsList={otherSkills} />
+        <SkillsListCard cardName={"Programming Tools"} skillsList={tools} />
+      </section>
+    </div>
   );
 }
 
