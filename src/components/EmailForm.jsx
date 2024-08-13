@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Button, Typography, Textarea } from "@material-tailwind/react";
 import emailjs from "emailjs-com";
+import useInitiateEmail from "../hooks/useInitiateEmail";
 
 export const EmailForm = () => {
   const [formData, setFormData] = useState({
@@ -9,9 +10,7 @@ export const EmailForm = () => {
     message: "",
   });
 
-  useEffect(() => {
-    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-  }, []);
+  useInitiateEmail();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -30,6 +29,7 @@ export const EmailForm = () => {
       .then(
         (response) => {
           console.log("SUCCESS!", response.status, response.text);
+          alert("Email sent successfully!");
           setFormData({ name: "", email: "", message: "" });
         },
         (err) => {

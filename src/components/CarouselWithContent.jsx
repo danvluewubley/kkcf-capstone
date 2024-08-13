@@ -1,4 +1,4 @@
-import { Carousel, Typography, Button } from "@material-tailwind/react";
+import { Carousel } from "@material-tailwind/react";
 import ProjectDisplay from "./ProjectDisplay";
 
 export function CarouselWithContent() {

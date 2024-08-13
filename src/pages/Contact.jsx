@@ -3,7 +3,7 @@ import usePageTitleAndFavicon from "../hooks/useUpdateTitle";
 import EmailContent from "../components/EmailContent";
 
 function Contact() {
-  usePageTitleAndFavicon("Home", "mail.png");
+  usePageTitleAndFavicon("Contact", "mail.png");
 
   return <EmailContent />;
 }
