@@ -2,7 +2,8 @@ import React from "react";
 import SocialIcon from "../components/SocialIcon";
 import DarkModeToggleButton from "../components/DarkModeToggleButton";
 import { useDarkMode } from "../context/DarkModeContext";
-import "../styles/slide.css";
+// import "../styles/slide.css";
+import "../styles/border.css";
 
 function AboutContent() {
   const { darkMode } = useDarkMode();
@@ -58,13 +59,14 @@ function AboutContent() {
         </section>
 
         <aside className="w-1/2 justify-center items-center slide-from-right hidden md:flex flex-grow">
-          <img
-            src="/headshot.jpg"
-            alt="headshot"
-            className="md:h-1/2 md:w-1/2 h-[200px] rounded-full border-4 border-gray-300 object-cover"
-          />
+          <div className="border-animation md:h-1/2">
+            <img
+              src="/headshot.jpg"
+              alt="headshot"
+              className="md:h-full h-[200px] object-cover"
+            />
+          </div>
         </aside>
-
         <DarkModeToggleButton />
       </div>
     </div>
