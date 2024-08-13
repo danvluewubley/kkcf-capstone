@@ -2,7 +2,7 @@ import React from "react";
 import SocialIcon from "../components/SocialIcon";
 import DarkModeToggleButton from "../components/DarkModeToggleButton";
 import { useDarkMode } from "../context/DarkModeContext";
-// import "../styles/slide.css";
+import "../styles/slide.css";
 import "../styles/border.css";
 
 function AboutContent() {
