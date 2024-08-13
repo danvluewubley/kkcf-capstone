@@ -1,40 +1,74 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { useDarkMode } from "./DarkModeContext";
-import DarkModeToggleButton from "../components/DarkModeToggleButton";
 
 function Nav() {
-  const { darkMode } = useDarkMode();
-
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <header className="w-full z-10 h-16">
-      <nav className="flex items-center justify-between bg-blue-gray-800 text-white px-6 py-4">
-        <div className="text-3xl font-custom">
-          <Link to="/">My Portfolio</Link>
+      <nav className="bg-blue-gray-800 text-white px-6 py-4">
+        <div className="flex items-center justify-between">
+          <div className="text-3xl font-custom">
+            <Link to="/">My Portfolio</Link>
+          </div>
+          <button
+            onClick={toggleMenu}
+            type="button"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-default"
+            aria-expanded={isMenuOpen}
+          >
+            <span className="sr-only">Open main menu</span>
+            <svg
+              className="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
         </div>
-        <ul className="flex list-none p-0 m-0 space-x-8">
-          {["/", "/about", "/projects", "/skills"].map((path, index) => (
-            <li key={index}>
-              <Link
-                to={path}
-                className={`relative text-white font-custom text-2xl transition-all duration-300`}
-              >
-                {path === "/"
-                  ? "Home"
-                  : path.charAt(1).toUpperCase() + path.slice(2)}
-                <span
-                  className={`absolute left-0 right-0 bottom-0 h-0.5 bg-white transition-all duration-300 transform scale-x-0 group-hover:scale-x-100 ${
-                    location.pathname === path ? "scale-x-100" : ""
-                  }`}
-                />
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <div
+          className={`${
+            isMenuOpen ? "block" : "hidden"
+          } w-full md:block md:w-auto mt-4 md:mt-0`}
+          id="navbar-default"
+        >
+          <ul className="flex flex-col md:flex-row list-none p-0 m-0 space-y-2 md:space-y-0 md:space-x-8">
+            {["/", "/about", "/projects", "/skills"].map((path, index) => (
+              <li key={index}>
+                <Link
+                  to={path}
+                  className={`relative text-white font-custom text-2xl transition-all duration-300`}
+                  onClick={() => setIsMenuOpen(false)} // Close the menu when a link is clicked
+                >
+                  {path === "/"
+                    ? "Home"
+                    : path.charAt(1).toUpperCase() + path.slice(2)}
+                  <span
+                    className={`absolute left-0 right-0 bottom-0 h-0.5 bg-white transition-all duration-300 transform scale-x-0 group-hover:scale-x-100 ${
+                      location.pathname === path ? "scale-x-100" : ""
+                    }`}
+                  />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </nav>
-      <DarkModeToggleButton />
     </header>
   );
 }
