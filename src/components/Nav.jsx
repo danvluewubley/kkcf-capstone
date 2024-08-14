@@ -43,7 +43,7 @@ function Nav() {
           {/* Desktop Menu */}
           <div className="hidden md:flex md:ml-auto">
             <ul className="flex list-none p-0 m-0 space-x-8">
-              {["/", "/about", "/projects", "/skills", "/contact"].map(
+              {["/", "/about", "/projects", "/skills", "/experience", "/contact"].map(
                 (path, index) => (
                   <li key={index}>
                     <Link
@@ -76,7 +76,7 @@ function Nav() {
         {isMenuOpen && (
           <div className="md:hidden mt-4">
             <ul className="flex flex-col list-none p-0 m-0 space-y-2">
-              {["/", "/about", "/projects", "/skills", "/contact"].map(
+              {["/", "/about", "/projects", "/skills", "/experience", "/contact"].map(
                 (path, index) => (
                   <li key={index}>
                     <Link
