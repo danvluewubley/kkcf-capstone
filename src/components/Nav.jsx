@@ -10,7 +10,7 @@ function Nav() {
   };
 
   return (
-    <header className="w-full z-10 h-16">
+    <header className="w-full z-10 h-16 sticky top-0">
       <nav className="bg-gray-800 text-white px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="text-3xl font-custom">
