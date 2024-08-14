@@ -19,11 +19,6 @@ function AboutContent() {
       alt: "GitHub profile",
       link: "https://github.com/danvluewubley",
     },
-    {
-      src: "gmail.png",
-      alt: "Email Daniel",
-      link: "mailto:danielw72908@gmail.com",
-    },
   ];
 
   return (
@@ -51,7 +46,7 @@ function AboutContent() {
           <h2 className="md:text-5xl text-2xl font-custom font-bold pt-10 pb-5 dark:text-gray-300">
             Contact
           </h2>
-          <div className="grid grid-flow-col gap-4 w-1/2 justify-around md:p-0 pb-10">
+          <div className="grid grid-flow-col gap-4 w-1/3 justify-around md:p-0 pb-10">
             {socialLinks.map((social, index) => (
               <SocialIcon key={index} {...social} />
             ))}

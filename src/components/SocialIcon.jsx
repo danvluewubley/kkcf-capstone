@@ -2,12 +2,14 @@ import React from 'react'
 
 function SocialIcon({ src, alt, link }) {
   return (
-    <img
-      src={src}
-      alt={alt}
-      className="cursor-pointer w-24 hover:opacity-80 transition-opacity duration-300"
-      onClick={() => window.open(link, "_blank")}
-    />
+    <a href={link} target='_blank'>
+
+      <img
+        src={src}
+        alt={alt}
+        className="cursor-pointer w-24 hover:opacity-80 transition-opacity duration-300"
+      />
+    </a>
   );
 }
 
