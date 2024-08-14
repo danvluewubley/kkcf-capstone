@@ -39,9 +39,14 @@ function HomeContent() {
             new technologies and constantly seek opportunities to learn and grow
             in the tech field.
           </p>
-          <button className="bg-red-500 hover:bg-red-600 dark:bg-red-600 dark:hover:bg-red-500 text-white font-bold py-2 px-4 rounded mt-4">
-            <Link to="/contact">Contact Me</Link>
-          </button>
+          <div className="grid grid-cols-2 gap-3">
+            <button className="bg-red-500 hover:bg-red-600 dark:bg-red-600 dark:hover:bg-red-500 text-white font-bold py-2 px-4 rounded mt-4">
+              <Link to="/contact">Contact Me</Link>
+            </button>
+            <button className="bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-500 text-white font-bold py-2 px-4 rounded mt-4">
+              <Link to="https://sapphire-inez-73.tiiny.site/" target="_blank">Resume</Link>
+            </button>
+          </div>
         </section>
         <aside className="h-full md:flex flex-col justify-center items-center font-custom relative flex-grow hidden">
           <img
