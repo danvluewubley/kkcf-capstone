@@ -52,6 +52,7 @@ export const EmailForm = () => {
             value={formData.name}
             onChange={handleChange}
             required
+            autoComplete="off"
             className="border border-gray-300 p-2 mb-4 dark:bg-gray-300 dark:border-gray-900 placeholder-gray-500 dark:placeholder-black"
           />
           <input
@@ -61,6 +62,7 @@ export const EmailForm = () => {
             value={formData.email}
             onChange={handleChange}
             required
+            autoComplete="off"
             className="border border-gray-300 p-2 mb-4 dark:bg-gray-300 dark:border-gray-900 placeholder-gray-500 dark:placeholder-black"
           />
           <Textarea
@@ -69,6 +71,7 @@ export const EmailForm = () => {
             value={formData.message}
             onChange={handleChange}
             required
+            autoComplete="off"
             className="mb-4 dark:border-gray-900 placeholder-gray-500 dark:placeholder-black"
           />
           <div className="flex justify-end md:mt-20">
