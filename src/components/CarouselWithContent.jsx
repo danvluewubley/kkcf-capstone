@@ -37,6 +37,13 @@ export function CarouselWithContent() {
         codeLink="https://github.com/danvluewubley/weather-app-react"
         demoLink="https://weather-app-react-dckm.onrender.com"
       />
+      <ProjectDisplay
+        imageSrc="https://media.istockphoto.com/id/865457032/vector/abstract-futuristic-cyberspace-with-binary-code-matrix-background-with-digits-well-organized.jpg?s=612x612&w=0&k=20&c=IQcdedY8fn_DMq6nwc5MaHUBe0H0d5DPyibHR8J2usk="
+        title="Booklist App"
+        description="Organize and track your reading journey with the Booklist App. Easily add your books while keeping tabs on what you've read and what’s next. Share your favorite titles with friends and discover new reads in a user-friendly interface."
+        languages="React.js, Tailwind CSS, Express.js, Node.js, PostgreSQL"
+        codeLink="https://github.com/danvluewubley/booklist-express"
+      />
     </Carousel>
   );
 }
