@@ -44,7 +44,9 @@ function HomeContent() {
               <Link to="/contact">Contact Me</Link>
             </button>
             <button className="bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-500 text-white font-bold py-2 px-4 rounded mt-4">
-              <Link to="https://sapphire-inez-73.tiiny.site/" target="_blank">Resume</Link>
+              <Link to="https://danielwuresume.tiiny.site/" target="_blank">
+                Resume
+              </Link>
             </button>
           </div>
         </section>
