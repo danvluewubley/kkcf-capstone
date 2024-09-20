@@ -6,7 +6,7 @@ const timelineElements = [
     description:
       "Began high school at Queens High School for the Sciences at York College and took AP Computer Science Principles",
     buttonText: "Details",
-    date: "2022—2026",
+    date: "Sep 2022—Jun 2026",
     icon: "school",
     color: "blue",
     tech: ["Python"],
@@ -21,7 +21,7 @@ const timelineElements = [
     date: "Feb 2023—Jun 2023",
     icon: "work",
     color: "purple",
-    tech: ["Illustrator"],
+    tech: ["Adobe Illustrator", "Google Sheets", "Google Forms"],
     link: "https://etamedia.com/",
   },
   {
@@ -53,7 +53,7 @@ const timelineElements = [
     description:
       "Enhanced frontend and backend knowledge with React.js and Express.js",
     buttonText: "Details",
-    date: "2024—Present",
+    date: "Jul 2024—Present",
     icon: "work",
     color: "red",
     tech: [
@@ -74,6 +74,18 @@ const timelineElements = [
       "Git",
     ],
     link: "https://www.theknowledgehouse.org/karim_kharbouch_coding_fellowship/",
+  },
+  {
+    id: 4,
+    title: "Code Next Student Engineer",
+    location: "Manhattan, New York",
+    description: "TBA",
+    buttonText: "Details",
+    date: "Sep 2024—Present",
+    icon: "work",
+    color: "blue",
+    tech: ["TBA"],
+    link: "https://codenext.withgoogle.com/",
   },
 ];
 
